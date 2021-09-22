@@ -23,7 +23,8 @@ public class App {
 		int cantidadUsuarios=lecturaArchivoClientes(scan,nombres,apellidos,ruts,contrasenias,saldos);
 		lecturaArchivoStatus(scan,ruts,estados);
 		int cantidadPeliculas=lecturaArchivoPeliculas(scan,nombresDePeliculas,tiposDePeliculas,recaudaciones,horarios);
-		iniciarSesion(scan,nombres,apellidos,ruts,contrasenias,saldos,estados,nombresDePeliculas,tiposDePeliculas,recaudaciones,horarios, cantidadUsuarios, cantidadPeliculas,entradasCompradas);
+		iniciarSesion(scan,nombres,apellidos,ruts,contrasenias,saldos,estados,nombresDePeliculas,tiposDePeliculas,
+				recaudaciones,horarios, cantidadUsuarios, cantidadPeliculas,entradasCompradas);
 		
 	}//****FIN DEL MAIN****
 
@@ -32,18 +33,23 @@ public class App {
 		
 	}
 
-	private static int lecturaArchivoPeliculas(Scanner scan, String[] nombresDePeliculas, String[] tiposDePeliculas, double[] recaudaciones, String[] horarios) {
+	private static int lecturaArchivoPeliculas(Scanner scan, String[] nombresDePeliculas, String[] tiposDePeliculas, 
+			double[] recaudaciones, String[] horarios) {
 		return 0;
 		// TODO Auto-generated method stub
 		
 	}
 
-	private static int lecturaArchivoClientes(Scanner scan, String[] nombres, String[] apellidos, String[] ruts, String[] contrasenias, double[] saldos) {
+	private static int lecturaArchivoClientes(Scanner scan, String[] nombres, String[] apellidos, String[] ruts, 
+			String[] contrasenias, double[] saldos) {
 		return 0;
 		// TODO Auto-generated method stub
 		
 	}
-	private static void iniciarSesion(Scanner scan, String[] nombres, String[] apellidos, String[] ruts, String[] contrasenias, double[] saldos, String[] estados, String[] nombresDePeliculas, String[] tiposDePeliculas, double[] recaudaciones, String[] horarios, int cantidadUsuarios, int cantidadPeliculas, String[][] entradasCompradas) {
+	private static void iniciarSesion(Scanner scan, String[] nombres, String[] apellidos, 
+			String[] ruts, String[] contrasenias, double[] saldos, String[] estados,
+			String[] nombresDePeliculas, String[] tiposDePeliculas, double[] recaudaciones, 
+			String[] horarios, int cantidadUsuarios, int cantidadPeliculas, String[][] entradasCompradas) {
 		// ***MENU*** 
 		//INGRESAR RUT
 		while(true) {
@@ -82,7 +88,8 @@ public class App {
 							String apellidoInput = scan.nextLine();
 							System.out.print("\nCONTRASEÑA:");
 							String claveInput = scan.nextLine();
-							registrarNuevoUsuario(rutInput, ruts, nombreInput, nombres, apellidoInput, apellidos, claveInput, contrasenias, cantidadUsuarios);
+							registrarNuevoUsuario(rutInput, ruts, nombreInput, nombres, apellidoInput, apellidos, 
+									claveInput, contrasenias, cantidadUsuarios);
 							cantidadUsuarios++;
 							
 							System.out.println("\n**********************************************************");
@@ -96,7 +103,8 @@ public class App {
 						else {
 					//CERRAR SISTEMA
 							if (op ==3) {
-								cerrarSistema(scan,nombres,apellidos,ruts,contrasenias,saldos,estados,nombresDePeliculas,tiposDePeliculas,recaudaciones,horarios, cantidadUsuarios, cantidadPeliculas);
+								cerrarSistema(scan,nombres,apellidos,ruts,contrasenias,saldos,estados,
+								nombresDePeliculas,tiposDePeliculas,recaudaciones,horarios, cantidadUsuarios, cantidadPeliculas);
 							} 
 					//OPCION INVALIDA
 							else {
@@ -128,7 +136,8 @@ public class App {
 				}else
 				//CERRAR SISTEMA
 				if(op==2) {
-					cerrarSistema(scan, nombres, apellidos, ruts, contrasenias, saldos, estados, nombresDePeliculas, tiposDePeliculas, recaudaciones, horarios, cantidadUsuarios, cantidadPeliculas);
+					cerrarSistema(scan, nombres, apellidos, ruts, contrasenias, saldos, estados, 
+					nombresDePeliculas, tiposDePeliculas, recaudaciones, horarios, cantidadUsuarios, cantidadPeliculas);
 									
 				}
 			    // OPCION INVALIDA
