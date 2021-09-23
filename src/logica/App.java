@@ -23,6 +23,8 @@ public class App {
 		int cantidadUsuarios=lecturaArchivoClientes(scan,nombres,apellidos,ruts,contrasenias,saldos);
 		lecturaArchivoStatus(scan,ruts,estados);
 		int cantidadPeliculas=lecturaArchivoPeliculas(scan,nombresDePeliculas,tiposDePeliculas,recaudaciones,horarios);
+		
+		//******************************
 		iniciarSesion(scan,nombres,apellidos,ruts,contrasenias,saldos,estados,nombresDePeliculas,tiposDePeliculas,
 				recaudaciones,horarios, cantidadUsuarios, cantidadPeliculas,entradasCompradas);
 		
